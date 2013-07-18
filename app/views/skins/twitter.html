@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            var widgetId = window.location.search.substring(1).split('&')[0].split('=')[1];
+            var twitterAccount = window.location.search.substring(1).split('&')[1].split('=')[1];
+
+            $('<a class="twitter-timeline" ng-href="https://twitter.com/{{twitterAccount}}" data-widget-id="{{widgetId}}" height="340"></a>'
+                    .replace("{{twitterAccount}}", twitterAccount)
+                    .replace("{{widgetId}}", widgetId)
+            ).appendTo("body");
+
+            !function (d, s, id) {
+
+                var js, fjs = d.getElementsByTagName(s)[0];
+                var p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + "://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");
+        </script>
+    </body>
+</html>

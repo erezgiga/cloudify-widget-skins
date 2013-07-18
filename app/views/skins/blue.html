@@ -1,0 +1,30 @@
+
+hello world!
+<div get-html target-id="preview" value-holder="skinConfiguration">Guy Mograbi</div>
+
+<div id="blueSkin" ng-app="blueSkin" ng-controller="BlueController">
+    <div id="form">
+        <div class="detailBox">
+            Account name:
+            <input ng-model="skinConfiguration.twitterAccount"/>
+        </div>
+
+        <div class="detailBox">
+            Widget ID:
+            <input ng-model="skinConfiguration.widgetId" ng-change="generatePreview()"/>
+        </div>
+
+        <div id="buttons">
+            <input type="button" id="codeBtn" value="Get code" ng-click="showCode = true" ng-disabled="!widgetId"/>
+        </div>
+    </div>
+
+    skinConfiguration = {{skinConfiguration}}
+    <iframe id="preview" ng-src="/views/skins/twitter.html?widgetId={{skinConfiguration.widgetId}}&twitterAccount={{skinConfiguration.twitterAccount}}" scrolling="no"></iframe>
+
+    <div id="generatedCode" ng-show="!!showCode">
+        <input type="button" id="closeBtn" value="X" ng-click="showCode = false"/>
+        <textarea id="code" readonly/>
+
+    </div>
+</div>
