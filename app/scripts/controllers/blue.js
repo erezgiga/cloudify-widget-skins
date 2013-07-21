@@ -1,6 +1,6 @@
 'use strict';
 
-function BlueController($scope) {
+function Customize($scope) {
 
     $scope.skinConfiguration = {"widgetId":null, "twitterAccount":null}
 
