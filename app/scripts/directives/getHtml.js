@@ -3,7 +3,7 @@
 angular.module('cloudifyWidgetSkinsApp')
   .directive('getHtml', function () {
     return {
-      template: '<textarea rows="10" cols="40" readonly/>',
+      template: '<textarea rows="10" cols="40" readonly></textarea>',
       replace:true,
       restrict: 'A',
         scope:{
@@ -11,8 +11,7 @@ angular.module('cloudifyWidgetSkinsApp')
             "valueHolder":"="
         },
       link: function postLink(scope, element, attrs) {
-          scope.$watch('valueHolder',function(){
-              console.log("I have a new value!");
+          scope.$watch('valueHolder', function() {
               element.val($("#" + scope.targetId)[0].outerHTML);
           },true);
       }
