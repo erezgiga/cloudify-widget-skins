@@ -8,7 +8,6 @@ angular.module('cloudifyWidgetSkinsApp')
 
     $scope.$watch('template', function() {
         var tmpl = $compile($scope.template)($scope);
-        console.log(tmpl);
         $('#templateContainer').html(tmpl);
     });
 

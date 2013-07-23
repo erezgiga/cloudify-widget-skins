@@ -12,7 +12,7 @@ angular.module('cloudifyWidgetSkinsApp')
         },
       link: function postLink(scope, element, attrs) {
           scope.$watch('valueHolder', function() {
-              element.val($("#" + scope.targetId)[0].outerHTML);
+              element.val($("#" + attrs.targetId)[0].outerHTML);
           },true);
       }
     };
