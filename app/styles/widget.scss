@@ -18,45 +18,45 @@
     overflow: hidden;
 }
 
-#form {
+#configuration {
     width: 230px;
     height: 325px;
-    background-color: #52a7ff;
-    top: 20px;
-    left: 20px;
+    background-color: #fff;
+    opacity: 0.7;
+    border: none;
+    top: 120px;
+    left: 230px;
     position: absolute;
     padding: 30px 0 0 10px;
     border-radius: 5px;
-}
-
-.detailBox {
-    margin-bottom: 15px;
-    width: 180px;
-    input {
-      width: 200px;
-      border: none;
-      border-radius:5px;
-      margin-top: 5px;
-    }
-}
-
-#buttons {
-    bottom: 10px;
-    position: absolute;
-    width: 220px;
-    input {
-        background-color: #99deff;
-        border-radius:5px;
-        border: none;
-        font-size: 12px;
-        width: 100%;
-        color: #000;
-        &[disabled]{
-          color: grey;
-          background-color: lightsteelblue;
+    .detailBox {
+        margin-bottom: 15px;
+        width: 180px;
+        input {
+            width: 200px;
+            border: none;
+            border-radius:5px;
+            margin-top: 5px;
         }
-        &:hover:not([disabled]){
-          color: #fff;
+    }
+    #buttons {
+        bottom: 10px;
+        position: absolute;
+        width: 220px;
+        input {
+            background-color: #99deff;
+            border-radius:5px;
+            border: none;
+            font-size: 12px;
+            width: 100%;
+            color: #000;
+            &[disabled]{
+                color: grey;
+                background-color: lightsteelblue;
+            }
+            &:hover:not([disabled]){
+                color: #fff;
+            }
         }
     }
 }

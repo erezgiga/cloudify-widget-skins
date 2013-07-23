@@ -3,16 +3,13 @@
 angular.module('cloudifyWidgetSkinsApp')
   .directive('metaField', function ( $compile , $rootScope ) {
     return {
-      template: '<div></div>',
-      restrict: 'A',
-
+        restrict: 'A',
         scope:true,
-      link: function(scope, element, attrs) {
+        link: function(scope, element, attrs) {
           attrs.$observe( 'fieldName',function( value ){
-              console.log(["appending",value]);
-              var myTemplate =  "<label>" + value + "<input ng-model=\"" + value + "\"/><div>{{" + value + "}}</div></label>"
+              var myTemplate =  "<input ng-model=\"" + value + "\"/>"
                element.append( $compile( myTemplate )($rootScope) );
           });
-      }
+        }
     };
   });
