@@ -18,7 +18,7 @@ angular.module('cloudifyWidgetSkinsApp')
                                     "<div meta-field field-name='{{field}}'></div>" +
                                 "</div>" +
                                 "<div id='buttons'>" +
-                                    "<input type='button' id='codeBtn' value='Get code' ng-click='showCode = true' ng-disabled='!skinConfiguration.widgetId'/>" +
+                                    "<input type='button' id='codeBtn' value='Get code' ng-click='showCode=true' ng-disabled='!widgetId'/>" +
                                 "</div>" +
                             "</div>";
 
