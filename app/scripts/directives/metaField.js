@@ -11,7 +11,6 @@ angular.module('cloudifyWidgetSkinsApp')
           attrs.$observe( 'fieldName',function( value ){
               console.log(["appending",value]);
               var myTemplate =  "<label>" + value + "<input ng-model=\"" + value + "\"/><div>{{" + value + "}}</div></label>"
-              console.log(["compiling", myTemplate ])
                element.append( $compile( myTemplate )(scope) );
           });
       }
