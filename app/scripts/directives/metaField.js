@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cloudifyWidgetSkinsApp')
-  .directive('metaField', function ( $compile ) {
+  .directive('metaField', function ( $compile , $rootScope ) {
     return {
       template: '<div></div>',
       restrict: 'A',
@@ -11,7 +11,7 @@ angular.module('cloudifyWidgetSkinsApp')
           attrs.$observe( 'fieldName',function( value ){
               console.log(["appending",value]);
               var myTemplate =  "<label>" + value + "<input ng-model=\"" + value + "\"/><div>{{" + value + "}}</div></label>"
-               element.append( $compile( myTemplate )(scope) );
+               element.append( $compile( myTemplate )($rootScope) );
           });
       }
     };
