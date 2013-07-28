@@ -4,3 +4,6 @@ dist
 .idea
 .sass-cache
 app/bower_components
+*.iml
+*.iws
+.gitignore
