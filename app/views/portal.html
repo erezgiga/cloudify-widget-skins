@@ -1,0 +1,17 @@
+<div id="header"></div>
+<div id="portalContainer">
+    <div id="title">Skins Portal</div>
+    <div id="skins">
+        <ul>
+            <li class="skinItem" ng-repeat="skin in skins.skins">
+                <a ng-href="#/widget/{{skin.name}}">
+                    <div id="skinImg">
+                        <img ng-src="{{skin.img}}" />
+                    </div>
+                    <div id="skinName">{{skin.name}}</div>
+                    <div id="skinDesc">{{skin.description}}</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

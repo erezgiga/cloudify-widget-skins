@@ -1,14 +1,18 @@
-<div get-template id="templateContainer" template="{{template}}"></div>
+<div id="header"></div>
+<div id="configContainer">
+    <div get-template id="templateContainer" template="{{template}}"></div>
 
-<div id="userForm">
-    <h3> Widget configuration </h3>
-    <div class="userFormField">
-        Template code:
-        <textarea id="template" ng-model="template"></textarea>
-    </div>
+    <div id="userForm">
+        <h3> Widget configuration </h3>
+        <div class="userFormField">
+            Template code:
+            <textarea id="template" ng-model="template"></textarea>
+        </div>
 
-    <div class="userFormField">
-        Field names {control, name, label, [type, options{name}]}:
-        <textarea ng-model="fieldNames" id="fieldNames"></textarea>
+        <div class="userFormField">
+            Field names:
+            {control, name, label, [type, options{name}]}
+            <textarea ng-model="fieldNames" id="fieldNames"></textarea>
+        </div>
     </div>
 </div>

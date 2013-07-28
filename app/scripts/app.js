@@ -1,13 +1,18 @@
 'use strict';
 
-angular.module('cloudifyWidgetSkinsApp', [])
-  .config(function ($routeProvider) {
+var app = angular.module('cloudifyWidgetSkinsApp', []);
+
+app.config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+        .when('/', {
+            templateUrl: 'views/portal.html',
+            controller: 'PortalCtrl'
+        })
+        .when('/widget/:skinId', {
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
+});
