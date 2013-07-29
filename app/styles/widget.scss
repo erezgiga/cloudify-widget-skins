@@ -138,10 +138,10 @@ html, body {
     width: 300px;
   }
   #template {
-    height: 230px;
+    height: 220px;
   }
   #fieldNames {
-    height: 150px;
+    height: 130px;
   }
   h3 {
     color: #434343;
@@ -154,5 +154,17 @@ html, body {
     position: absolute;
     bottom: 10px;
     right: 10px;
+  }
+  #saveButton {
+    background-color: #434343;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    width: 95%;
+    color: #fff;
+    margin-left: 10px
+  }
+  #saveButton:hover {
+    background-color: #888888;
   }
 }
