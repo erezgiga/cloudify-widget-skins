@@ -1,20 +1,5 @@
 <a href="/" ><div id="header"></div></a>
-<div id="configContainer">
+<div id="skinContainer">
     <div get-template id="templateContainer" template="{{template}}"></div>
-
-    <div id="userForm">
-        <h3> Widget configuration </h3>
-        <div class="userFormField">
-            Template code:
-            <textarea id="template" ng-model="template"></textarea>
-        </div>
-
-        <div class="userFormField">
-            Field names:
-            {control, name, label, [type, options{name}]}
-            <textarea ng-model="fieldNames" id="fieldNames"></textarea>
-        </div>
-
-        <input type="button" value="Save" id="saveButton" ng-click="saveTemplate();"/>
-    </div>
+    <div get-configuration id="configurationContainer"></div>
 </div>

@@ -9,7 +9,7 @@ html, body {
   height: 40px;
 }
 
-#configContainer {
+#skinContainer {
   border-radius: 10px;
   background-color: #fff;
   height: 540px;
@@ -137,11 +137,19 @@ html, body {
   textarea {
     width: 300px;
   }
+  #name {
+    height: 20px;
+    width: 240px;
+  }
+  #thumb {
+    height: 20px;
+    width: 210px;
+  }
   #template {
-    height: 220px;
+    height: 160px;
   }
   #fieldNames {
-    height: 130px;
+    height: 90px;
   }
   h3 {
     color: #434343;
@@ -155,16 +163,26 @@ html, body {
     bottom: 10px;
     right: 10px;
   }
-  #saveButton {
+  .saveButton {
     background-color: #434343;
     border-radius: 5px;
     border: none;
     font-size: 12px;
-    width: 95%;
     color: #fff;
     margin-left: 10px
   }
-  #saveButton:hover {
+  .saveButton:hover {
     background-color: #888888;
+  }
+  #deleteBtn {
+    background-color: #d61b29;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    color: #fff;
+    margin-left: 10px
+  }
+  #deleteBtn:hover {
+    background-color: #f41f2e;
   }
 }

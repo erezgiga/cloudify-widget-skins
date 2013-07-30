@@ -2,7 +2,7 @@ var skinsJSON = {
     "skins": [
         {
             "name": "Green",
-            "img": "http://www.aiche.org/sites/default/files/styles/aiche_content/public/images/webinar/global_sustainability-green-green-green.jpg",
+            "thumb": "http://www.aiche.org/sites/default/files/styles/aiche_content/public/images/webinar/global_sustainability-green-green-green.jpg",
             "description": "Green skin",
             "backgroundColor": "green",
             "template": "<div><div id='twitterWidget' style='background-color:{{backgroundColor}}'><iframe id='preview' ng-src='/views/skins/twitter.html?widgetId={{widgetId}}&twitterAccount={{twitterAccount.name}}' scrolling='no'></iframe><div id='generatedCode' ng-show='!!showCode'><input type='button' id='closeBtn' value='X' ng-click='showCode=false'/><div get-html target-id='preview' value-holder='widgetId'></div></div></div></div>",
@@ -10,7 +10,7 @@ var skinsJSON = {
         },
         {
             "name": "Red",
-            "img": "http://blogs.telegraph.co.uk/culture/files/2011/01/red-light-wallpapers_13156_2560x1920.jpg",
+            "thumb": "http://blogs.telegraph.co.uk/culture/files/2011/01/red-light-wallpapers_13156_2560x1920.jpg",
             "description": "Red skin",
             "backgroundColor": "red",
             "template": "<div><div id='twitterWidget' style='background-color:{{backgroundColor}}'><iframe id='preview' ng-src='/views/skins/twitter.html?widgetId={{widgetId}}&twitterAccount={{twitterAccount.name}}' scrolling='no'></iframe><div id='generatedCode' ng-show='!!showCode'><input type='button' id='closeBtn' value='X' ng-click='showCode=false'/><div get-html target-id='preview' value-holder='widgetId'></div></div></div></div>",
@@ -18,7 +18,7 @@ var skinsJSON = {
         },
         {
             "name": "Blue",
-            "img": "http://lovely-pics.com/data/media/21/ripple_blue__win_xp_theme.jpg",
+            "thumb": "http://lovely-pics.com/data/media/21/ripple_blue__win_xp_theme.jpg",
             "description": "Blue skin",
             "backgroundColor": "blue",
             "template": "<div><div id='twitterWidget' style='background-color:{{backgroundColor}}'><iframe id='preview' ng-src='/views/skins/twitter.html?widgetId={{widgetId}}&twitterAccount={{twitterAccount.name}}' scrolling='no'></iframe><div id='generatedCode' ng-show='!!showCode'><input type='button' id='closeBtn' value='X' ng-click='showCode=false'/><div get-html target-id='preview' value-holder='widgetId'></div></div></div></div>",
@@ -26,7 +26,7 @@ var skinsJSON = {
         },
         {
             "name": "Yellow",
-            "img": "http://www.thewritingnut.com/wp-content/uploads/2011/04/yellow-rose-800.jpg",
+            "thumb": "http://www.thewritingnut.com/wp-content/uploads/2011/04/yellow-rose-800.jpg",
             "description": "Yellow skin",
             "backgroundColor": "yellow",
             "template": "<div><div id='twitterWidget' style='background-color:{{backgroundColor}}'><iframe id='preview' ng-src='/views/skins/twitter.html?widgetId={{widgetId}}&twitterAccount={{twitterAccount.name}}' scrolling='no'></iframe><div id='generatedCode' ng-show='!!showCode'><input type='button' id='closeBtn' value='X' ng-click='showCode=false'/><div get-html target-id='preview' value-holder='widgetId'></div></div></div></div>",
@@ -35,15 +35,9 @@ var skinsJSON = {
     ]
 };
 
-var skinProps = skinsJSON.skins[0];
-
 if(typeof(Storage) !== "undefined")
 {
     if (localStorage.getItem('skins') == null) {
         localStorage.setItem('skins', JSON.stringify(skinsJSON));
-    }
-
-    if (localStorage.getItem('skinProps') == null) {
-        localStorage.setItem('skinProps', JSON.stringify(skinProps));
     }
 }
