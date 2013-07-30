@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cloudifyWidgetSkinsApp')
-  .directive('getConfiguration', function () {
+  .directive('getConfiguration', ["$location", "skinService", function ($location, skinService) {
     return {
       template: '<div id="userForm">' +
               '<h3>Skin configuration</h3>' +
@@ -30,6 +30,32 @@ angular.module('cloudifyWidgetSkinsApp')
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
 
+          scope.updateSkin = function() {
+              var skin = createSkinObject();
+              skinService.updateSkin(skinService.currentSkinId, skin);
+          }
+
+          scope.addSkin = function() {
+              var newSkin = createSkinObject();
+              skinService.addSkin(newSkin);
+          }
+
+          scope.deleteSkin = function() {
+              skinService.deleteSkin(skinService.currentSkinId);
+              $location.path('/');
+          }
+
+          function createSkinObject() {
+              var skin = {
+                  "name": scope.name,
+                  "description": scope.name + " description",
+                  "thumb": scope.thumb,
+                  "backgroundColor": $("#twitterWidget").css("background-color"),
+                  "template": scope.template,
+                  "fields": scope.fieldNames
+              };
+              return skin;
+          }
       }
     };
-  });
+  }]);

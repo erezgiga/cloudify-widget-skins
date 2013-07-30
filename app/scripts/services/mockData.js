@@ -1,6 +1,7 @@
 var skinsJSON = {
     "skins": [
         {
+            "id": 1,
             "name": "Green",
             "thumb": "http://www.aiche.org/sites/default/files/styles/aiche_content/public/images/webinar/global_sustainability-green-green-green.jpg",
             "description": "Green skin",
@@ -9,6 +10,7 @@ var skinsJSON = {
             "fields": '{"fields": [{"control": "select","name": "twitterAccount","label": "Twitter Account","options": [{"name":"erezcarmel"},{"name":"guymugrabi"}]},{"control": "input","type": "color","name": "backgroundColor","label": "Background Color"},{"control": "input","type": "text","name": "widgetId","label": "Widget ID"}]}'
         },
         {
+            "id": 2,
             "name": "Red",
             "thumb": "http://blogs.telegraph.co.uk/culture/files/2011/01/red-light-wallpapers_13156_2560x1920.jpg",
             "description": "Red skin",
@@ -17,6 +19,7 @@ var skinsJSON = {
             "fields": '{"fields": [{"control": "select","name": "twitterAccount","label": "Twitter Account","options": [{"name":"erezcarmel"},{"name":"guymugrabi"}]},{"control": "input","type": "color","name": "backgroundColor","label": "Background Color"},{"control": "input","type": "text","name": "widgetId","label": "Widget ID"}]}'
         },
         {
+            "id": 3,
             "name": "Blue",
             "thumb": "http://lovely-pics.com/data/media/21/ripple_blue__win_xp_theme.jpg",
             "description": "Blue skin",
@@ -25,6 +28,7 @@ var skinsJSON = {
             "fields": '{"fields": [{"control": "select","name": "twitterAccount","label": "Twitter Account","options": [{"name":"erezcarmel"},{"name":"guymugrabi"}]},{"control": "input","type": "color","name": "backgroundColor","label": "Background Color"},{"control": "input","type": "text","name": "widgetId","label": "Widget ID"}]}'
         },
         {
+            "id": 4,
             "name": "Yellow",
             "thumb": "http://www.thewritingnut.com/wp-content/uploads/2011/04/yellow-rose-800.jpg",
             "description": "Yellow skin",
